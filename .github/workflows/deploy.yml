@@ -41,9 +41,7 @@ jobs:
     name: Deploy to GitHub Pages (optional)
     needs: build
     runs-on: ubuntu-latest
-    if: >
-      github.ref == 'refs/heads/main' &&
-      vars.DEPLOY_TARGET == 'gh-pages'
+    if: github.ref == 'refs/heads/main'
     permissions:
       pages: write
       id-token: write
